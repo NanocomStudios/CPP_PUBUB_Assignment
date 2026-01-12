@@ -6,13 +6,6 @@
 
 using namespace std;
 
-void startServer(int port);
-
-int main(int argc, char* argv[]){
-    startServer(stoi(argv[1]));
-    return 0;
-}
-
 void startServer(int port) {
     int serverSocket = socket(AF_INET, SOCK_STREAM, 0);
 
@@ -73,4 +66,10 @@ void startServer(int port) {
 
         
     }
+}
+
+
+int main(int argc, char* argv[]){
+    startServer(stoi(argv[1]));
+    return 0;
 }
